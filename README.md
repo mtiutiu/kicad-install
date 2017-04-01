@@ -14,4 +14,6 @@ In order to install (and update), run:
 ```
 ./build-kicad.sh 
 ./create-deb-pkg.sh # generate a debian package
+# install your .deb package by dpkg: 
+# dpkg -i kicad/build/release/kicad-...deb
 ```
