@@ -4,9 +4,14 @@ This layout is specifically designed to ensure building Kicad from a specific co
 
 # Usage
 
+In order to download Kicad source code: 
+
 ```
 ./prepare.sh  # for the first time
-./build-kicad.sh 
-./create-deb-pkg.sh # in order to generate a deb package
 ```
 
+In order to install (and update), run: 
+```
+./build-kicad.sh 
+./create-deb-pkg.sh # generate a debian package
+```
