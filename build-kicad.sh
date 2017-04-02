@@ -20,13 +20,15 @@ sudo apt-get install libwxgtk3.0-0v5 libglew-dev libcairo2-dev libbz2-dev \
 cd $ROOT
 
 git clean -f -d
-git pull
+git pull origin master
 
 mkdir -p $BUILD_DIR
 cd $BUILD_DIR
 
 cmake \
-  -DCMAKE_INSTALL_PREFIX="/usr" \
+  -DCMAKE_PREFIX_PATH=/usr/local \
+  -DCMAKE_INSTALL_PREFIX=/usr/local \
+  -DDEFAULT_INSTALL_PATH=/usr/local \
   -DCMAKE_BUILD_TYPE=Release \
   -DKICAD_SCRIPTING=ON \
   -DKICAD_SCRIPTING_MODULES=ON \
