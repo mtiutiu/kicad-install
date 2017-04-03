@@ -1,3 +1,9 @@
 [submodule "kicad"]
 	path = kicad
 	url = https://github.com/KiCad/kicad-source-mirror
+[submodule "aktos-kicad-lib"]
+	path = aktos-kicad-lib
+	url = https://github.com/aktos-io/aktos-kicad-lib
+[submodule "kicad-library"]
+	path = kicad-library
+	url = https://github.com/KiCad/kicad-library
