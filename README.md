@@ -11,16 +11,28 @@ This layout is specifically designed to ensure building Kicad from a specific co
 ./prepare.sh  # for the first time
 ```
 
-In order to install (and update), run: 
+In order to install (and update), run:
 ```
-./build-kicad.sh 
+./build-kicad.sh
 ./create-deb-pkg.sh # generate a debian package
-# install your .deb package by dpkg: 
+```
+
+install your .deb package by `dpkg`:
+```
 # dpkg -i kicad/build/release/kicad-...deb
 ```
 
-### Installing default Kicad libraries 
+### Installing Libraries and Footprints
 
 ```
 ./install-kicad-library.sh
+./install-aktos-library.sh  # optional
+```
+
+After copying appropriate files to appropriate folders, update `fp_lib_table`
+and the kicad template:
+
+```
+./gen-fplib-table.sh > ~/.config/kicad/fp-lib-table
+./update-kicad-template.sh
 ```

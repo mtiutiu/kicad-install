@@ -1,7 +1,10 @@
-#!/bin/bash 
+#!/bin/bash
 
 DIR=$(dirname "$(readlink -f "$0")")
 ROOT=$DIR/kicad
 BUILD_DIR=$ROOT/build/release
 KICAD_INSTALL_PREFIX=/usr
 KICAD_DATA_DIR=$KICAD_INSTALL_PREFIX/share/kicad
+KICAD_LIBRARY_DIR=$KICAD_DATA_DIR/library
+KICAD_MODULES_DIR=$KICAD_DATA_DIR/modules
+KICAD_3DMOD_DIR=$KICAD_MODULES_DIR/packages3d/
