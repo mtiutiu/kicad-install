@@ -4,8 +4,11 @@ This layout is specifically designed to ensure building Kicad from a specific co
 
 # Usage
 
+1. Install Kicad 
+2. Install libraries, footprints and 3D shapes 
+3. Update paths
 
-## Installing Kicad
+## 1. Installing Kicad
 
 ```
 ./prepare.sh  # for the first time
@@ -22,7 +25,7 @@ install your .deb package by `dpkg`:
 # dpkg -i kicad/build/release/kicad-...deb
 ```
 
-## Installing Libraries, Footprints and 3D Shapes
+## 2. Installing Libraries, Footprints and 3D Shapes
 
 ### Default Kicad Libraries
 
@@ -37,7 +40,7 @@ install your .deb package by `dpkg`:
 ./install-aktos-library.sh
 ```
 
-## Updating Paths
+## 3. Updating Paths
 After copying appropriate files to appropriate folders, update `fp_lib_table`
 and the kicad template:
 
