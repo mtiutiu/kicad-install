@@ -22,11 +22,17 @@ install your .deb package by `dpkg`:
 # dpkg -i kicad/build/release/kicad-...deb
 ```
 
-### Installing Libraries and Footprints
+### Installing Default Kicad Libraries, Footprints and 3D Models
 
 ```
 ./install-kicad-library.sh
-./install-aktos-library.sh  # optional
+./install-kicad-packages3d.sh
+```
+
+### Installing Aktos Libraries
+
+```
+./install-aktos-library.sh
 ```
 
 After copying appropriate files to appropriate folders, update `fp_lib_table`

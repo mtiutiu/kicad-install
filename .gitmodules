@@ -7,3 +7,6 @@
 [submodule "kicad-library"]
 	path = kicad-library
 	url = https://github.com/KiCad/kicad-library
+[submodule "kicad-packages3d"]
+	path = kicad-packages3d
+	url = https://github.com/KiCad/packages3D

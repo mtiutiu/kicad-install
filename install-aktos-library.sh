@@ -34,6 +34,15 @@ copy_eeschema_libs () {
     done < <( find $LIBDIR \( -iname "*.lib" -o -iname "*.dcm" \) -print0 )
 	sudo chmod 755 $TARGET -R
 }
+
+copy_packages3d () {
+    LIBDIR=$1
+    LIBNAME=$(basename $LIBDIR)
+    sudo mkdir -p $KICAD_3DMOD_DIR/$LIBNAME
+    echo "Copying 3D drawings under $LIBNAME to $KICAD_3DMOD_DIR/$LIBNAME"
+    sudo rsync -avP --delete $LIBDIR/**/*.3dshapes $KICAD_3DMOD_DIR/$LIBNAME
+}
+
 echo "copying eeschema libraries into $KICAD_LIBRARY_DIR"
 for lib in $DIR/aktos-kicad-lib/*; do
     copy_eeschema_libs "$lib"
@@ -42,6 +51,12 @@ done
 echo "copying pcbnew modules into $KICAD_MODULES_DIR"
 for lib in $DIR/aktos-kicad-lib/*; do
     copy_pcbnew_libs "$lib"
+done
+
+echo "copying 3d packages to $KICAD_3DMOD_DIR"
+sudo mkdir -p $KICAD_3DMOD_DIR
+for lib in $DIR/aktos-kicad-lib/*; do
+    copy_packages3d "$lib"
 done
 
 echo "------------------ WARNING --------------------------"

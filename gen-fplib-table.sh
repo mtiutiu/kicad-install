@@ -1,6 +1,5 @@
 #!/bin/bash
 DIR=$(dirname "$(readlink -f "$0")")
-
 source $DIR/conf.sh
 
 # (lib (name aktos)(type KiCad)(uri "$(KISYSMOD)aktos/aktos.pretty")(options "")(descr ""))
