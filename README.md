@@ -45,6 +45,6 @@ After copying appropriate files to appropriate folders, update `fp_lib_table`
 and the kicad template:
 
 ```
-./gen-fplib-table.sh > ~/.config/kicad/fp-lib-table
+./update-fplib-table.sh
 ./update-kicad-template.sh
 ```
