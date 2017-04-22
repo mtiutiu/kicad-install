@@ -48,3 +48,12 @@ and the kicad template:
 ./update-fplib-table.sh
 ./update-kicad-template.sh
 ```
+
+# Adding new libraries
+
+```
+git submodule add https://example.com/your-git-repo aktos-kicad-lib/your-name
+./install-aktos-library.sh
+./update-fplib-table.sh
+./update-kicad-template.sh
+```
