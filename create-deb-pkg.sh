@@ -3,7 +3,7 @@
 DIR=$(dirname "$(readlink -f "$0")")
 
 source $DIR/conf.sh
-DATE=$(date +"%Y%d%m")
+DATE=$(date +"%Y%m%dT%H%M")
 cd $BUILD_DIR
 
 PACKAGE_NAME="kicad-$DATE-$(uname -m)"
