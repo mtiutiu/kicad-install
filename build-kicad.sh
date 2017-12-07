@@ -4,7 +4,7 @@ DIR=$(dirname "$(readlink -f "$0")")
 source $DIR/conf.sh
 
 if [[ ! -d $ROOT ]]; then 
-    echo "run ./prepare.sh first"
+    echo "$ROOT is not found, follow the README"
     exit
 fi
 
@@ -20,7 +20,6 @@ sudo apt-get install libwxgtk3.0-0v5 libglew-dev libcairo2-dev libbz2-dev \
 cd $ROOT
 
 git clean -f -d
-git pull origin master
 
 mkdir -p $BUILD_DIR
 cd $BUILD_DIR
