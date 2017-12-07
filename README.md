@@ -10,11 +10,21 @@ This layout is specifically designed to ensure building Kicad from a specific co
 
 ## 1. Installing Kicad
 
+Install build dependencies: 
+
 ```
-./prepare.sh  # for the first time
+sudo apt-get install crudini git sed
 ```
 
-In order to install (and update), run:
+Fetch Kicad sources (at the known good commit):
+
+```
+git submodule update --recursive
+#git submodule update --recursive --remote # <- for the latest version of Kicad
+```
+
+
+In order to build:
 ```
 ./build-kicad.sh
 ./create-deb-pkg.sh # generate a debian package
