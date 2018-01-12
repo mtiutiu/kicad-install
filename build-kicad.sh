@@ -15,7 +15,7 @@ sudo apt-get install libwxgtk3.0-0v5 libglew-dev libcairo2-dev libbz2-dev \
                      libboost-locale-dev libboost-program-options-dev \
                      libboost-test-dev \
                      swig python-wxgtk3.0* \
-                     liboce-foundation-dev
+                     liboce*
 
 
 cd $ROOT
