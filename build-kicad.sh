@@ -8,14 +8,18 @@ if [[ ! -d $ROOT ]]; then
     exit
 fi
 
-sudo apt-get install libwxgtk3.0-0v5 libglew-dev libcairo2-dev libbz2-dev \
+sudo apt-get -y install libwxgtk3.0-0v5 libglew-dev libcairo2-dev libbz2-dev \
                      doxygen libssl-dev \
                      libboost-dev libboost-thread-dev libboost-context-dev \
                      libboost-filesystem-dev libboost-iostreams-dev \
                      libboost-locale-dev libboost-program-options-dev \
                      libboost-test-dev \
                      swig python-wxgtk3.0* \
-                     liboce*
+                     liboce* \
+                     libwxgtk3.0-dev \
+                     libglm-dev \
+                     libcurl4-gnutls-dev \
+                     cmake
 
 
 cd $ROOT
